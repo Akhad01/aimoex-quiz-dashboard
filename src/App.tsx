@@ -1,8 +1,11 @@
-function App() {
+import { Outlet } from 'react-router-dom'
+
+const App = () => {
   return (
-    <>
-      App
-    </>
+    <div>
+      Sidebar 
+      <Outlet />
+    </div>
   )
 }
 
