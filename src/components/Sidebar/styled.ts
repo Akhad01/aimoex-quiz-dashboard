@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SidebarWrapper = styled.div`
-  background-color: #DAE3F8;
+  background-color: #FEFEFE;
   width: 260px;
   padding: 36px 20px;
   transition: var(--transition-default);
@@ -118,6 +118,10 @@ export const NavLinkStyled = styled.a`
       rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   }
 
+  &.active>span {
+    color: white;
+  }
+
   @media screen and (max-width: 1200px) {
     padding: 0;
     justify-content: center;
@@ -137,6 +141,7 @@ export const NavLinkIcon = styled.img`
 
 export const NavLinkText = styled.span`
   text-transform: capitalize;
+  color: #556171;
 
   @media screen and (max-width: 1200px) {
     display: none;

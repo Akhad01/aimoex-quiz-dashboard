@@ -7,7 +7,7 @@ interface SidebarState {
 
 const initialState: SidebarState = {
   isSidebarOpen: false,
-  activePage: 'Пользовательский панель'
+  activePage: 'Dashboard'
 };
 
 const sidebarSlice = createSlice({

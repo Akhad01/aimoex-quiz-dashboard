@@ -1,6 +1,8 @@
+import { Paper } from '@mui/material'
+
 const AchievementsPage = () => {
   return (
-    <div>AchievementsPage</div>
+    <Paper sx={{ height: '100px' }}>Достижения</Paper>
   )
 }
 

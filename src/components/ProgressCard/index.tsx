@@ -1,52 +1,23 @@
 import React from "react";
-import styled from "styled-components";
-import { Paper, Typography, CircularProgress, Box } from "@mui/material";
+import { Typography, CircularProgress } from "@mui/material";
+import { CircleText, CircleWrapper, StyledCard } from './styled';
 
 interface ProgressCardProps {
-  completedTests: number;
-  averageScore: number; // в процентах
+  title: string;
+  averageScore: number;
 }
 
-const StyledCard = styled(Paper)`
-  width: 100%;
-  padding: 20px;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #FEFEFE !important;
-`;
-
-const CircleWrapper = styled(Box)`
-  position: relative;
-  display: inline-flex;
-  margin-top: 16px;
-`;
-
-const CircleText = styled(Box)`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: bold;
-  font-size: 18px;
-`;
-
-const ProgressCard: React.FC<ProgressCardProps> = ({ completedTests, averageScore }) => {
+const ProgressCard: React.FC<ProgressCardProps> = ({ title, averageScore }) => {
   return (
     <StyledCard elevation={2}>
-      <Typography variant="h6" gutterBottom>
-        Прогресс
+      <Typography color='#556171' variant="h6" gutterBottom>
+        {title}
       </Typography>
-      <Typography variant="body2" color="textSecondary">
-        Пройдено тестов: {completedTests}
-      </Typography>
-
       <CircleWrapper>
         <CircularProgress
           variant="determinate"
           value={averageScore}
-          size={120}
+          size={90}
           thickness={6}
           sx={{
             color: averageScore >= 70 ? "#4CAF50" : "#f44336",

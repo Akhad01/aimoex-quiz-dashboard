@@ -26,7 +26,7 @@ export const OptionLabel = styled.label<{
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 16px;
+  padding: 15px 16px;
   border-radius: 12px;
   cursor: pointer;
   border: 2px solid
@@ -64,4 +64,8 @@ export const ActionsRow = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
+
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+  }
 `;

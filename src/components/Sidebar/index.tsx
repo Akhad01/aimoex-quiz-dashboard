@@ -15,7 +15,7 @@ import {
 } from "./styled";
 import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 import { NavLink as RouterLink } from 'react-router-dom'
-import { setActivePage } from '../../store/slices/sidebar/sidebarSlice';
+import { setActivePage } from '../../store/slices/sidebarSlice';
 
 const Sidebar: React.FC = () => {
   const [sidebarClass, setSidebarClass] = useState("");

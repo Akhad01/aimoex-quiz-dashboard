@@ -1,6 +1,8 @@
+import { Paper } from '@mui/material'
+
 const ProfilePage = () => {
   return (
-    <div>ProfilePage</div>
+    <Paper sx={{ height: '100px' }}>Профиль</Paper>
   )
 }
 

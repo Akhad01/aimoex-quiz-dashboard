@@ -1,6 +1,8 @@
+import { Paper } from '@mui/material'
+
 const BalancePage = () => {
   return (
-    <div>BalancePage</div>
+    <Paper sx={{ height: '100px' }}>Баланс/Мой Тариф</Paper>
   )
 }
 

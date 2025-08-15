@@ -5,7 +5,7 @@ import {
   SidebarToggler,
   ContentTopTitle,
 } from "./styled";
-import { toggleSidebar } from '../../store/slices/sidebar/sidebarSlice';
+import { toggleSidebar } from '../../store/slices/sidebarSlice';
 import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 
 const ContentTop: React.FC = () => {

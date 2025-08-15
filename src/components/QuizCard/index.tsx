@@ -8,7 +8,7 @@ interface QuizProps {
   correctIndex: number;
 }
 
-const Quiz: React.FC<QuizProps> = ({ question, options, correctIndex }) => {
+const QuizCard: React.FC<QuizProps> = ({ question, options, correctIndex }) => {
   const [selected, setSelected] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
@@ -86,4 +86,4 @@ const Quiz: React.FC<QuizProps> = ({ question, options, correctIndex }) => {
   );
 };
 
-export default Quiz;
+export default QuizCard;
