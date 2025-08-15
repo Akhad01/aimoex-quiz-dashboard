@@ -1,69 +1,52 @@
-# React + TypeScript + Vite
+# AIMOEX React Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Возможности
 
-Currently, two official plugins are available:
+- **Панель пользователя**:
+  - Имя пользователя.
+  - Прогресс: количество пройденных тестов и средний балл.
+  - Список последних результатов тестов с визуальной подсветкой.
+- **Викторина (Quiz)**:
+  - Один вопрос и 4 варианта ответа.
+  - Возможность выбрать вариант и проверить результат.
+  - Подсветка правильного и неправильного ответа.
+- **Адаптивный дизайн** для десктопа и мобильных устройств.
+- **Sidebar** для навигации между страницами.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Технологии
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** — UI-библиотека.
+- **TypeScript** — статическая типизация.
+- **Vite** — сборка и дев-сервер.
+- **Styled-components** — стилизация компонентов.
+- **MUI (Material UI)** — готовые UI-компоненты.
+- **Redux Toolkit** — управление состоянием.
+- **React Router DOM** — маршрутизация.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Запуск проекта
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Клонировать репозиторий
+```bash
+git clone https://github.com/Akhad01/aimoex-quiz-dashboard.git
+cd aimoex-quiz-dashboard
+```
+### 2. Установить зависимости
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 3. Запуск в режиме разработки
+```bash
+npm run dev
 ```
+
+
+### 4. Сборка для продакшена
+```bash
+npm run build
+```
+
