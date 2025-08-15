@@ -9,20 +9,27 @@ import {
   Navigation,
   NavList,
   NavItem,
-  NavLink,
+  NavLinkStyled,
   NavLinkIcon,
   NavLinkText,
 } from "./styled";
-import { useAppSelector } from '../../hooks/reduxHooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
+import { NavLink as RouterLink } from 'react-router-dom'
+import { setActivePage } from '../../store/slices/sidebar/sidebarSlice';
 
 const Sidebar: React.FC = () => {
-  const [activeLinkIdx] = useState(1);
   const [sidebarClass, setSidebarClass] = useState("");
   const isSidebarOpen = useAppSelector((state) => state.sidebar.isSidebarOpen)
+
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
     setSidebarClass(isSidebarOpen ? "sidebar-change" : "");
   }, [isSidebarOpen]);
+
+  const handleClick = (title: string) => () => {
+    dispatch((setActivePage(title)))
+  }
 
   return (
     <SidebarWrapper className={sidebarClass}>
@@ -35,12 +42,16 @@ const Sidebar: React.FC = () => {
 
       <Navigation>
         <NavList>
-          {navigationLinks.map((link) => (
-            <NavItem key={link.id}>
-              <NavLink href="#" className={link.id === activeLinkIdx ? "active" : ""}>
-                <NavLinkIcon src={link.image} alt={link.title} />
-                <NavLinkText>{link.title}</NavLinkText>
-              </NavLink>
+          {navigationLinks.map((navigationLink) => (
+            <NavItem key={navigationLink.id}>
+              <NavLinkStyled
+                as={RouterLink}
+                to={navigationLink.link}
+                onClick={handleClick(navigationLink.title)}
+              >
+                <NavLinkIcon src={navigationLink.image} alt={navigationLink.title} />
+                <NavLinkText>{navigationLink.title}</NavLinkText>
+              </NavLinkStyled>
             </NavItem>
           ))}
         </NavList>

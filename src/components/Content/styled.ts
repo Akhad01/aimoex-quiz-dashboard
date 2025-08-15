@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainContent = styled.div`
-  background-color: var(--clr-secondary);
+  background-color: #F2F5FA;
   flex: 1;
   padding: 32px;
 

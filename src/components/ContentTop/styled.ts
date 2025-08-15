@@ -23,7 +23,7 @@ export const SidebarToggler = styled.button`
 `;
 
 export const ContentTopTitle = styled.h3`
-  color: var(--clr-white);
+  color: #556171;
   font-size: 20px;
   font-weight: 600;
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SidebarWrapper = styled.div`
-  background-color: var(--clr-primary);
+  background-color: #DAE3F8;
   width: 260px;
   padding: 36px 20px;
   transition: var(--transition-default);
@@ -55,7 +55,7 @@ export const InfoImg = styled.div`
 export const InfoName = styled.span`
   font-weight: 500;
   font-size: 20px;
-  color: var(--clr-white);
+  color: var(--clr-black);
   text-transform: uppercase;
 
   @media screen and (max-width: 1200px) {
@@ -96,7 +96,8 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled.a`
+
+export const NavLinkStyled = styled.a`
   display: flex;
   align-items: center;
   padding: 6px 14px;
@@ -112,7 +113,7 @@ export const NavLink = styled.a`
   }
 
   &.active {
-    background-color: var(--clr-pumpkin);
+    background-color: #3788E5;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
       rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   }

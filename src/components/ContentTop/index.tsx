@@ -6,9 +6,11 @@ import {
   ContentTopTitle,
 } from "./styled";
 import { toggleSidebar } from '../../store/slices/sidebar/sidebarSlice';
-import { useAppDispatch } from '../../hooks/reduxHooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 
 const ContentTop: React.FC = () => {
+  const currentPage = useAppSelector((state) => state.sidebar.activePage) 
+
   const dispatch = useAppDispatch()
   const handleClick = () => {
     dispatch(toggleSidebar())
@@ -20,7 +22,7 @@ const ContentTop: React.FC = () => {
         <SidebarToggler onClick={handleClick}>
           <img src={iconsImgs.menu} alt="Toggle sidebar" />
         </SidebarToggler>
-        <ContentTopTitle>Home</ContentTopTitle>
+        <ContentTopTitle>{currentPage}</ContentTopTitle>
       </ContentTopLeft>
     </ContentTopWrapper>
   );

@@ -1,31 +1,20 @@
+import { routes } from '../app/routes';
 import { iconsImgs, personsImgs } from '../utils/images';
 
 export interface NavigationLink {
   id: number;
   title: string;
   image: string;
+  link: string
 }
 
-// export const navigationLinks: NavigationLink[] = [
-//     { id: 1, title: 'Home', image: iconsImgs.home },
-//     { id: 2, title: 'Budget', image: iconsImgs.budget },
-//     { id: 3, title: 'Transactions', image: iconsImgs.plane },
-//     { id: 4, title: 'Subscriptions', image: iconsImgs.wallet },
-//     { id: 5, title: 'Loans', image: iconsImgs.bills },
-//     { id: 6, title: 'Reports', image: iconsImgs.report },
-//     { id: 7, title: 'Savings', image: iconsImgs.wallet },
-//     { id: 8, title: 'Financial Advice', image: iconsImgs.wealth },
-//     { id: 9, title: 'Account', image: iconsImgs.user },
-//     { id: 10, title: 'Settings', image: iconsImgs.gears }
-// ];
-
 export const navigationLinks: NavigationLink[] = [
-    { id: 1, title: 'Пользовательский панель', image: iconsImgs.home },
-    { id: 2, title: 'Профиль', image: iconsImgs.user },
-    { id: 3, title: 'Последние тесты', image: iconsImgs.budget },
-    { id: 4, title: 'Результаты', image: iconsImgs.check },
-    { id: 5, title: 'Баланс/Мой тариф', image: iconsImgs.wallet },
-    { id: 6, title: 'Достижения', image: iconsImgs.report },
+    { id: 1, title: 'Пользовательский панель', image: iconsImgs.home, link: routes.root },
+    { id: 2, title: 'Профиль', image: iconsImgs.user, link: routes.profile },
+    { id: 3, title: 'Последние тесты', image: iconsImgs.budget, link: routes.recentTests },
+    { id: 4, title: 'Результаты', image: iconsImgs.check, link: routes.results },
+    { id: 5, title: 'Баланс/Мой тариф', image: iconsImgs.wallet, link: routes.balance },
+    { id: 6, title: 'Достижения', image: iconsImgs.report, link: routes.achievements },
 ];
 
 export interface Transaction {
