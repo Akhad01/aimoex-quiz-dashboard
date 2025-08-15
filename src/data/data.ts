@@ -1,4 +1,4 @@
-import { routes } from '../app/routes';
+import { routes } from '../router/routes';
 import { iconsImgs } from '../utils/images';
 
 export interface NavigationLink {

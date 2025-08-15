@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, CircularProgress } from "@mui/material";
+
 import { CircleText, CircleWrapper, StyledCard } from './styled';
 
 interface ProgressCardProps {

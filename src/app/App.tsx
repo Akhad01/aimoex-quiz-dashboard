@@ -1,6 +1,5 @@
-// import { Outlet } from 'react-router-dom'
-import Sidebar from '../components/Sidebar'
 import { AppWrapper } from './styled'
+import Sidebar from '../components/Sidebar'
 import Content from '../components/Content'
 
 const App = () => {
@@ -8,7 +7,6 @@ const App = () => {
     <AppWrapper>
       <Sidebar />
       <Content />
-      {/* <Outlet /> */}
     </AppWrapper>
   )
 }

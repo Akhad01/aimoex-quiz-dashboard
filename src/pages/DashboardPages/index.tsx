@@ -1,90 +1,11 @@
-// // import QuizCard from '../../components/QuizCard'
-// // import Box from '@mui/material/Box';
-// // import Grid from '@mui/material/Grid';
-// // import ProgressCard from '../../components/ProgressCard';
-// // import RecentResults from '../../components/RecentResults';
-// // import { progressStats, quizData, recentTestResults } from '../../data/data';
-// // import { BlockList } from './styled';
-
-// // const DashboardPages = () => {
-// //   return (
-// //     <Box>
-// //       <Grid container spacing={3}>
-// //         <Grid item xs={12} size={6}>
-// //           <QuizCard
-// //             question={quizData.question}
-// //             options={quizData.options}
-// //             correctIndex={quizData.correctIndex}
-// //           />
-// //         </Grid>
-// //         <Grid item xs={12} size={6}>
-// //           <BlockList>
-// //             {
-// //               progressStats.map((stat, index) => (
-// //                 <ProgressCard key={index} title={stat.title} averageScore={stat.averageScore} />
-// //               ))
-// //             }
-// //           </BlockList>
-// //         </Grid>
-// //         <Grid item xs={12}>
-// //           <RecentResults results={recentTestResults} />
-// //         </Grid>
-// //       </Grid>
-// //     </Box>
-// //   )
-// // }
-
-// // export default DashboardPages
-
-// import QuizCard from '../../components/QuizCard'
-// import Box from '@mui/material/Box';
-// import Grid from '@mui/material/Grid';
-// import ProgressCard from '../../components/ProgressCard';
-// import RecentResults from '../../components/RecentResults';
-// import { progressStats, quizData, recentTestResults } from '../../data/data';
-// import { BlockList } from './styled';
-
-// const DashboardPages = () => {
-//   return (
-//     <Box>
-//       <Grid container spacing={3}>
-//         <Grid xs={12} md={6}>
-//           <QuizCard
-//             question={quizData.question}
-//             options={quizData.options}
-//             correctIndex={quizData.correctIndex}
-//           />
-//         </Grid>
-
-//         <Grid xs={12} md={6}>
-//           <BlockList>
-//             {progressStats.map((stat, index) => (
-//               <ProgressCard
-//                 key={index}
-//                 title={stat.title}
-//                 averageScore={stat.averageScore}
-//               />
-//             ))}
-//           </BlockList>
-//         </Grid>
-
-//         <Grid xs={12}>
-//           <RecentResults results={recentTestResults} />
-//         </Grid>
-//       </Grid>
-//     </Box>
-//   );
-// };
-
-// export default DashboardPages;
-
-import QuizCard from '../../components/QuizCard'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import ProgressCard from '../../components/ProgressCard';
-import RecentResults from '../../components/RecentResults';
+
 import { progressStats, quizData, recentTestResults } from '../../data/data';
 import { BlockList } from './styled';
+import QuizCard from '../../components/QuizCard'
+import ProgressCard from '../../components/ProgressCard';
+import RecentResults from '../../components/RecentResults';
 
 const DashboardPages = () => {
   return (

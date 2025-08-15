@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { NavLink as RouterLink } from 'react-router-dom'
+
 import { personsImgs } from "../../utils/images";
 import { navigationLinks } from "../../data/data";
 import {
@@ -14,7 +16,6 @@ import {
   NavLinkText,
 } from "./styled";
 import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
-import { NavLink as RouterLink } from 'react-router-dom'
 import { setActivePage } from '../../store/slices/sidebarSlice';
 
 const Sidebar: React.FC = () => {

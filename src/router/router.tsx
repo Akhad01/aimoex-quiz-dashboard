@@ -1,12 +1,13 @@
 import { createBrowserRouter } from 'react-router-dom';
-import App from './App';
+
+import { routes } from './routes';
+import App from '../app/App';
 import DashboardPages from '../pages/DashboardPages';
 import ProfilePage from '../pages/ProfilePage';
 import RecentTestsPage from '../pages/RecentTestsPage';
 import ResultsPage from '../pages/ResultsPage';
 import AchievementsPage from '../pages/AchievementsPage';
 import BalancePage from '../pages/BalancePage';
-import { routes } from './routes';
 
 export const router = createBrowserRouter([
   {

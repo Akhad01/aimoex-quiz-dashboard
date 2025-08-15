@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Typography } from "@mui/material";
+
 import { ActionsRow, HiddenRadio, OptionLabel, OptionsContainer, StyledCard, Badge } from './styled';
 
 interface QuizProps {
